@@ -1,0 +1,49 @@
+<!--
+Max Rollfinke
+-->
+
+<body>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+
+  <!-- Set up basic webpage structure -->
+  <div id="header"></div>
+  <div id="nominal">
+    <p>Paragraph 1</div>
+  <div id="ordinal"></div>
+  <div id="interval"></div>
+  <div id="ratio"></div>
+
+
+  <style>
+    .red {
+        color: white;
+        background-color: #e41a1c;
+    }
+    .green {
+        color: #4daf4a;
+    }
+    .blue {
+        color: white;
+        background-color: #377eb8;
+    }
+    .purple {
+        color: #984ea3;
+    }
+  </style>
+
+  <script>
+
+        d3.select("#header").append("h1").text("Exploring Data Types!")
+        d3.select("#nominal").select("p").text("Nominal Data is data organized in non-ranked categories. For example, different favorite sports teams or music artists.")
+        d3.select("#ordinal").append("p").text("Ordinal Data is data organized in ranked categories. For example, rate your satisfaction with this class on a scale of 1-5.")
+        d3.select("#interval").append("p").text("Interval Data is numerical data on a scale that does not have an absolute 0. For example, temperature in Farenheit or Celsius.")
+        d3.select("#ratio").append("p").text("Ratio Data is numerical data on a scale that does have an absolute 0. For example, height or temperature in Kelvin.")
+
+        d3.select("#nominal").classed('red',true);
+        d3.select("#ordinal").classed('green',true);
+        d3.select("#interval").classed('blue',true);
+        d3.select("#ratio").classed('purple',true);
+
+  </script>
+
+</body>
